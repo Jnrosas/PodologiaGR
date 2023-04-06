@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Turnos</title>
+</head>
+<body>
+  <video width="100%" autoplay loop muted id="video-feet">
+    <source src="./img/video_feet.mp4" type="video/mp4">
+    <source src="./img/video_feet.ogg" type="video/ogg">
+    Tu browser no soporta video
+  </video>
+
+  <header class="header">
+    <div id="logoytitulo">
+      <a href="./index.html"><img src="./img/logoGra3.png" alt="logo Consultorio Podológico Graciela Rosas" width="100"></a>
+      <h1>Consultorio Podológico Graciela Rosas</h1>
+    </div>
+    <nav>
+      <a href="./QuienSoy.html">Quién soy</a>
+      <div class="dropdown">
+        <a href="./Servicios.html">Servicios <i class="fa fa-caret-down"></i></a>
+        <div class="dropdowncontent">
+          <a href="./Servicio1.html">Servicio 1</a>
+          <a href="./Servicio2.html">Servicio 2</a>
+          <a href="./Servicio3.html">Servicio 3</a>
+        </div>
+      </div>
+      <a href="./Turnos.html">Turnos</a>
+      <a href="./DondeEstoy.html">Dónde estoy</a>
+    </nav>
+  </header>
+
+  <form class="formulario" action="#" method="post" target="_self">
+    <fieldset>
+      <legend>Pida su Turno</legend>
+      <input type="text" id="nombre" placeholder="Nombre" name="nombre" size="50" required autofocus><br><br>
+      <input type="text" id="apellido" placeholder="Apellido"name="apellido" size="50" required><br><br>
+      <input type="number" id="edad" placeholder="Edad" min="1" max="120" name="edad" required>
+      <input type="number" id="dni" placeholder="DNI" name="DNI" required>
+      <input type="tel" id="telefono" name="telefono" placeholder="Teléfono ej: 351-532-7352" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+      <textarea name="comentario" id="comentario" cols="100%" rows="8" placeholder="Motivo de su visita"></textarea>
+      <p id="horario">Horario de atención: de 9:00AM a 08:00PM</p>
+      <input type="date" name="fecha" id="fecha" required>
+      <input type="time" name="hora" id="hora" min="09:00" max="20:00" step="1800" required>
+      <span id="validity"></span><br><br>
+      <input type="submit" value="Enviar" class="btnE">
+      <input type="reset" value="Borrar" class="btnR">
+    </fieldset>
+  </form>
+  
+  <button id="myBtn" onclick="myFunction()">Pausar</button>
+
+  <footer>
+    <img src="./img/logosolo.png" width="70px"/>
+    <p>copyright 2023</p>
+  </footer>
+
+</body>
+
+<script src="./script/script.js"></script>
+
+</html>
