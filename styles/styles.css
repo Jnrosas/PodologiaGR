@@ -3,9 +3,21 @@
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-family: Arial;
   font-size: 17px;
+}
+
+.body-clients {
+  background-color: rgba(222, 184, 135, 0.571);
+
+}
+
+.main-clients {
+  margin-top: 15vh;
 }
 
 #video-feet {
@@ -21,9 +33,23 @@ body {
 }
 
 h1 {
-  padding-left: 40%;
+  width: 100%;
+  text-align: right;
   opacity: 0.7;
   font-size: 2em;
+}
+
+#clientes {
+  width: 100%;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 2em;
+}
+
+#header {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.132);
+  position: fixed;
+  min-width: 100vw;
 }
 
 .header {
@@ -31,8 +57,9 @@ h1 {
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   margin-top: 0;
+  z-index: 10;
 }
 
 nav {
@@ -56,7 +83,8 @@ nav a:hover {
 }
 
 .dropdown:hover .dropdowncontent {
-  display: block;
+  display: flex;
+  flex-direction: row;
 }
 
 .dropdowncontent a {
@@ -68,24 +96,24 @@ nav a:hover {
   background: rgba(0, 0, 0, 0.5);
   top: 10px;
   left: -10px;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  font-size: smaller;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  z-index: 10;
 }
 
 .contenido {
   position: relative;
-  top: 40vh;
+  top: 20vh;
   width: 80%;
   margin: auto;
   display: flex;
+  align-items: center;
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  font-size: smaller;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -159,7 +187,7 @@ footer {
 
 .formulario {
   position: relative;
-  top: 30vh;
+  top: 20vh;
   width: 80%;
   margin: auto;
   z-index: 1;
@@ -167,6 +195,10 @@ footer {
 
 input, textarea {
   font-size: 1em;
+}
+
+.mb-3 label {
+  width: 10vw;
 }
 
 #fecha {
@@ -218,4 +250,29 @@ input, textarea {
   position: absolute;
   top: 0.3vh;
   left: 45vw;
+}
+
+.edit-delete-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 6vw;
+}
+
+.btn-new {
+  background-color: #25d366;
+}
+
+.btn-success {
+  width: 100%;
+}
+
+.form {
+  background-color: aliceblue;
+  margin:0 auto 10vh auto;
+  width: 40%; 
+  padding: 1em;
+  border-radius: 1em;
 }
