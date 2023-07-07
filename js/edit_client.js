@@ -13,6 +13,7 @@ const { createApp } = Vue
         phone:"",
         insurance:"",
         photo:"",
+        //url:'http://localhost:5000/clients', 
         url:'https://jnrosas.pythonanywhere.com/clients/'+id,
        }  
     },
